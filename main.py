@@ -20,6 +20,7 @@ while True:
             continue
         except sr.RequestError:
             print("could not request results")
+            continue
 
     translated_text = GoogleTranslator(source='auto', target='te').translate(english_text)
     print(translated_text)
